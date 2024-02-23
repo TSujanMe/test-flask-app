@@ -4,7 +4,7 @@ import requests
 
 app = Flask(__name__)
 
-@app.route('/fetch-love', methods=['GET'])
+@app.route('/', methods=['GET'])
 def fetchlove():
     return jsonify({"message": "Immense love for her"})
 
