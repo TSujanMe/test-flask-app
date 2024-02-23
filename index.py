@@ -4,12 +4,14 @@ import requests
 
 app = Flask(__name__)
 
+@app.route('/fetch-love', methods=['GET'])
+def fetchlove():
+    return jsonify({"message": "Immense love for her"})
+
 @app.route('/', methods=['POST'])
 def home():
     body = request.files.get("fike")
     return jsonify({"file": "test"})
-
-
 
 @app.route('/fetch_google', methods=['GET'])
 def fetch_googlee():
