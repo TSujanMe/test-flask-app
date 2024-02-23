@@ -5,14 +5,14 @@ import requests
 app = Flask(__name__)
 
 @app.route('/', methods=['POST'])
-def fetch_google():
+def home():
     body = request.files.get("fike")
     return jsonify({"file": "test"})
 
 
 
 @app.route('/fetch_google', methods=['GET'])
-def fetch_google():
+def fetch_googlee():
     # Replace 'https://www.google.com' with the desired URL
     url = 'https://www.google.com'
     
